@@ -47,7 +47,7 @@ xml.definitions 'xmlns' => 'http://schemas.xmlsoap.org/wsdl/',
     end
   end
 
-  xml.service :name => "service" do
+  xml.service :name => @name do
     xml.port :name => "#{@name}_port", :binding => "tns:#{@name}_binding" do
       xml.tag! "soap:address", :location => url_for(:action => '_action', :only_path => false)
     end
